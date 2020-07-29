@@ -8,4 +8,8 @@ Projeyi bir web sitesinde çalıştırmak istiyorsanız bunun için PHP’nin 7.
 Son olarak “globaldefine.php” adlı dosyadaki “vt_kullanici”,” vt_sifre”,”vt” isimli yerleri kendi sunucunuzun bilgilerine göre düzenlemelisiniz,<br>
 “vt_kullanici” // Veri tabanı kullanıcı adın<br>
 ” vt_sifre” // Veri tabanı şifren<br>
-”vt” // Veri tabanı ismi<br>
+”vt” // Veri tabanı ismi<br><br>
+
+Yönetici:<br>
+Kullanıcı Adı: admin<br>
+Şifre: 1234<br>
