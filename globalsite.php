@@ -335,6 +335,7 @@ if(!isset($_POST['uniqueid'])){
 	echo json_encode($callback);
 	exit();
 }
+if(!isset($_POST['foruser'])) {
 $uniqueid = $_POST['uniqueid'];
 $cat_control = $vt->veri('SELECT COUNT(id) FROM categories WHERE uniqueid = "'.$uniqueid.'"');
 if($cat_control < 1){
@@ -342,7 +343,9 @@ $callback["code"] = 0;
 echo json_encode($callback);
 exit();
 }
-
+} else {
+	$uniqueid = "0";
+}
 $q = 'category_id = "'.$uniqueid.'"';
 if(isset($_POST['foruser'])) {
 	if(isset($_SESSION['giris'])){

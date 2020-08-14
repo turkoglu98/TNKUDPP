@@ -128,6 +128,7 @@ function file_refresh(id){
               var trcount = $("#files_table tbody tr").length;
               $("#files_table tbody tr:gt(" + (pageing - 1) + ")").hide();
               var pagenum = Math.ceil(trcount / pageing);
+              $("#page_nav").html("");
               for (var i = 1; i <= pagenum; i++)
               {
                 $("#page_nav").append('<li class="page-item"><a class="page-link">' + i + '</a></li>');
@@ -193,7 +194,6 @@ function file_refresh(id){
 	$("body").delegate("#files_table tbody .file_delete", "click", function(){
 	var select_row = event.target.parentElement.parentElement.parentElement;
 	var uniqueid = $(select_row).find( "th" ).html();
-	var cat_id = $( "#nav_now" ).val();
   $("#site_loader").fadeIn();
   $.ajax({
 	    type: 'POST',
@@ -210,7 +210,7 @@ function file_refresh(id){
 	            	 var result = JSON.parse(data);
 					if (result.code == 1) {
 	            		$.toast({heading: 'Başarılı',text: 'Dosya başarıyla silindi',icon: 'success',position: 'bottom-right',loader: true,loaderBg: '#343a40' });
-	            		file_refresh(cat_id);
+	            		file_refresh("1");
 	                } else if (result.code== 0){
 	                	
 	                	$.toast({heading: 'Hata',text: 'Dosya silinirken bir hata oluştu',icon: 'error',position: 'bottom-right',loader: true,loaderBg: '#343a40' });
