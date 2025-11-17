@@ -9,7 +9,7 @@ $_SESSION['sec_code'] = $sec_code;
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TNKÜ - Dosya Paylaşım Platformu - Giriş Yap</title>
+	<title>TNKÜ - Dosya Paylasim Platformu - Giriş Yap</title>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
