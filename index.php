@@ -12,6 +12,7 @@ $quota_total = intval ($vt->veri('SELECT quota FROM users WHERE username="'.$use
 if($quota_used == null or $quota_used == "")
   $quota_used = 0;
 }
+
 ?>
 <!DOCTYPE html>
 <html>
